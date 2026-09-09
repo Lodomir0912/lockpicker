@@ -1,0 +1,17 @@
+sys
+os
+uuid
+argparse
+tqdm
+threading
+socket
+spnego.exceptions
+concurrent.futures
+telnetlib
+paramiko
+ftplib
+smbprotocol
+poplib
+smtplib
+mysql.connector
+psycopg2
