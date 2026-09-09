@@ -2,31 +2,27 @@
 Lockpicker is a multithreaded brute force login tool, supporting various protocols to attack. This tool is dedicated to security researchers and pentesters to perform brute force attacks in controlled and safe environemnts.
 
 Currently supported modules:    telnet, ssh, ftp, smb, smtp, pop3, mysql, postgresql
-(some modules may be slow, due to protocol's implementation)
+(some modules may be slow, due to protocol's implementation).
 ## Requirements
-* Several python libraries are required for this script to run. To install them, in terminal run:
+Several python libraries are required for this script to run. To install them, in terminal run:
 ```bash
 pip install -r requirements.txt
 ```
 ## Usage
-usage: lockpicker.py USERNAME@IP [-h] -p PASSWORDLIST [-n NUMPORT] [-t THREADS] -s SERVICE
+Usage: `lockpicker.py USERNAME@IP [-h] -p PASSWORDLIST [-n NUMPORT] [-t THREADS] -s SERVICE`
 
-options:
-  -h, --help            show this help message and exit
-  -p, --passwordlist PASSWORDLIST
-                        passwordlist to iterate through
-  -n, --numport NUMPORT
-                        custom port number for selected service
-  -t, --threads THREADS
-                        threads used to attack (default=8)
-  -s, --service SERVICE
-                        target service to attack
+Options:
+*  -h, --help    (show this help message and exit)
+*  -p, --passwordlist PASSWORDLIST    (passwordlist to iterate through)
+*  -n, --numport NUMPORT    (custom port number for selected service)
+*  -t, --threads THREADS    (threads used to attack (default=8))
+*  -s, --service SERVICE    (target service to attack)
 
 ## Examples
-examples:
+Examples:
 ```bash
-         python3 lockpicker.py user@127.0.0.1 -p passwords.txt -s telnet
-         python3 lockpicker.py postgres@127.0.0.1 -p passwords.txt -s postgresql -n 5555 -t 12
+python3 lockpicker.py user@127.0.0.1 -p passwords.txt -s telnet
+python3 lockpicker.py postgres@127.0.0.1 -p passwords.txt -s postgresql -n 5555 -t 12
 ```
 ## Example Output
 ```python
